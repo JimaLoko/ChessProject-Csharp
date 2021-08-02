@@ -8,6 +8,7 @@ namespace chess_console
         static void Main(string[] args)
         {
             Posicao p = new Posicao(2, 2);
+            TabuleiroBase tab = new TabuleiroBase(16, 16);
             Console.WriteLine(p);
         }
     }
