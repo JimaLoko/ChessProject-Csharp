@@ -1,4 +1,5 @@
 ﻿using System;
+using Tabuleiro;
 
 namespace chess_console
 {
@@ -6,7 +7,8 @@ namespace chess_console
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Posicao p = new Posicao(2, 2);
+            Console.WriteLine(p);
         }
     }
 }
