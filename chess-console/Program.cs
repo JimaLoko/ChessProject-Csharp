@@ -9,7 +9,7 @@ namespace chess_console
     {
         static void Main(string[] args)
         {
-            try
+            /*try
             {
                 TabuleiroBase tab = new TabuleiroBase(8, 8);
                 tab.ColocarPeca(new Torre(Cor.Amarela, tab), new Posicao(2, 55));
@@ -20,7 +20,10 @@ namespace chess_console
             catch(TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
-            }
+            }*/
+            PosicaoXadrez posicaoXadrez = new PosicaoXadrez('c', 7);
+            Console.WriteLine(posicaoXadrez);
+            Console.WriteLine(posicaoXadrez.toPosicao());
         }
     }
 }
