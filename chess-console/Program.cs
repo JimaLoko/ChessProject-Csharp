@@ -9,21 +9,22 @@ namespace chess_console
     {
         static void Main(string[] args)
         {
-            /*try
+            try
             {
                 TabuleiroBase tab = new TabuleiroBase(8, 8);
-                tab.ColocarPeca(new Torre(Cor.Amarela, tab), new Posicao(2, 55));
+                tab.ColocarPeca(new Torre(Cor.Amarela, tab), new Posicao(2, 7));
                 tab.ColocarPeca(new Rei(Cor.Amarela, tab), new Posicao(5, 1));
-                tab.ColocarPeca(new Cavalo(Cor.Amarela, tab), new Posicao(7, 4));
-                Tela.imprimirTabuleiro(tab);
+                tab.ColocarPeca(new Cavalo(Cor.Branca, tab), new Posicao(7, 4));
+                tab.ColocarPeca(new Rei(Cor.Branca, tab), new Posicao(4, 4));
+                Tela.ImprimirTabuleiro(tab);
             }
             catch(TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
-            }*/
-            PosicaoXadrez posicaoXadrez = new PosicaoXadrez('c', 7);
-            Console.WriteLine(posicaoXadrez);
-            Console.WriteLine(posicaoXadrez.toPosicao());
+            }
+            /*PosicaoXadrez pos = new PosicaoXadrez('c', 7);
+            Console.WriteLine(pos);
+            Console.WriteLine(pos.toPosicao());*/
         }
     }
 }
