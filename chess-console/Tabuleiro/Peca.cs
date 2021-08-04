@@ -3,7 +3,7 @@ using Tabuleiro.Enums;
 
 namespace Tabuleiro
 {
-    class Peca
+    abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
@@ -22,5 +22,7 @@ namespace Tabuleiro
         {
             QtMovimentos++;
         }
+
+        public abstract bool[,] MovimentosPossiveis();
     }
 }
