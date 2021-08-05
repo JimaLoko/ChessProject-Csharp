@@ -15,10 +15,19 @@ namespace chess_console
             ImprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine($"Turno: {partida.Turno}");
-            Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
-            if (partida.Xeque)
+            if (!partida.Terminada)
             {
-                Console.WriteLine("Xeque!!");
+                Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
+
+                if (partida.Xeque)
+                {
+                    Console.WriteLine("Xeque!!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("XEQUE MATE!!!!");
+                Console.WriteLine($"Vencedor: {partida.JogadorAtual}");
             }
         }
 
@@ -49,12 +58,12 @@ namespace chess_console
 
         public static void ImprimirTabuleiro(TabuleiroBase tabuleiro)
         {
-            for(int i = 0; i < tabuleiro.Linhas; i++)
+            for (int i = 0; i < tabuleiro.Linhas; i++)
             {
                 Console.Write($"{8 - i} ");
                 for (int j = 0; j < tabuleiro.Colunas; j++)
                 {
-                        Tela.ImprimirPeca(tabuleiro.Peca(i, j));
+                    Tela.ImprimirPeca(tabuleiro.Peca(i, j));
                 }
                 Console.WriteLine();
             }
@@ -70,7 +79,7 @@ namespace chess_console
                 Console.Write($"{8 - i} ");
                 for (int j = 0; j < tabuleiro.Colunas; j++)
                 {
-                    if (posicoesPossiveis[i,j])
+                    if (posicoesPossiveis[i, j])
                     {
                         Console.BackgroundColor = fundoAlterado;
                     }
@@ -117,7 +126,7 @@ namespace chess_console
                 }
                 Console.Write(" ");
             }
-            
+
         }
     }
 }
